@@ -1,0 +1,320 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/homeCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.comm/fd67e77f6d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MUPC</title>
+</head>
+
+<body>
+    <!--navbar and text area -->
+    <section class="header">
+        <!--navbar -->
+        <nav>
+            
+            <!-- <a class="logo" href="/home">hello</a> -->
+            <div class="nav-links" id="navLinks">
+                <img class="logo" src="/static/images/Logo.png">
+                
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+               
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="/event">Event</a></li>
+                    <li><a href="#alumnies">Alumnies</a></li>
+                    <li><a href="#recruiters">Recruiters</a></li>
+                    <li><a href="/contactUs">Conatct Us</a></li>
+                    {% if user.is_authenticated %}
+                    <img src="/static/images/user.png" class="user-pic">
+                    <li id="user" onclick="toggleUser()">{{user.username}}</li>
+                    {% endif %}
+                    <!-- <li><a href="signout">Logout</a></li> -->
+                </ul>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="/static/images/user.png">
+                            <h2>Sonu Banjara</h2>
+                        </div>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <img src="/static/images/user.png">
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="/static/images/setting.png">
+                            <p>Setting & Privacy</p>
+                            <span>></span>
+                        </a>
+                        <a href="/contactUs" class="sub-menu-link">
+                            <img src="/static/images/help.png">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="/static/images/logout.png">
+                            <p><a id="signOut" href="signout">Logout</a></p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <!--text area-->
+        <div class="text-box">
+            <h1>Medicaps University Placement Cell</h1>
+            <p>
+                Our Placement Cell at Medicaps University is dedicated to empowering students alumni by unlocking a world of opportunities <br> nurturing their career growth We understand the significance of a successful transition from education to the professional realm<br> our mission is to bridge this gap effectively
+            </p>
+            <a href="http://medicaps.ac.in" class="hero-button">Visit Us to know more</a>
+        </div>
+    </section>
+
+    <!-- course avaialable -->
+    <section id="courses" class="courses">
+        <h1>Courses Available</h1>
+        <p>
+            ENGINEERING, MANAGEMENT STUDIES, SCIENCE, COMMERCE, AGRICULTURE<br>
+            ART, PHARMACY, HUMANITIES & SOCIAL SCIENCE
+        </p>
+        <div class="course-row">
+            <div class="course-column">
+                <h3>Under Graduate</h3>
+                <ul class="underGraduate">
+                    <li><a href="">B.Tech</a></li>
+                    <li><a href="">B.Sc</a></li>
+                    <li><a href="">BCA</a></li>
+                    <li><a href="">B.Com.(Hons.)</a></li>
+                    <li><a href="">B.Sc.(Hons.) Agriculture</a></li>
+                    <li><a href="">B.Pharm</a></li>
+                    <li><a href="">BBA</a></li>
+                    <li><a href="">BCA+MCA(Integrated)</a></li>
+                </ul>
+            </div>
+            <div class="course-column">
+                <h3>Post Graduate</h3>
+                <ul class="postGraduate">
+                    <li><a href="">MBA</a></li>
+                    <li><a href="">MCA</a></li>
+                    <li><a href="">M.Tech</a></li>
+                    <li><a href="">MA</a></li>
+                    <li><a href="">M.Sc</a></li>
+                </ul>
+            </div>
+            <div class="course-column">
+                <h3>Ph.D</h3>
+                <ul class="phd">
+                    <li><a href="">B.Tech</a></li>
+                    <li><a href="">B.Sc</a></li>
+                    <li><a href="">BCA</a></li>
+                    <li><a href="">B.Com.(Hons.</a>)</li>
+                    <li><a href="">B.Sc.(Hons.) Agriculture</a></li>
+                    <li><a href="">B.Pharm</a></li>
+                    <li><a href="">BBA</a></li>
+                    <li><a href="">BCA+MCA(Integrated)</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies -->
+    <section class="companies">
+        <h1>Companies in College Campus</h1>
+        <div class="companies-row">
+            <div class="companies-column">
+                <img src="/static/images/Google.png">
+                <h3>Google</h3>
+            </div>
+            <div class="companies-column">
+                <img src="/static/images/Amazon.jpg">
+                <h3>Amazon</h3>
+            </div>
+            <div class="companies-column">
+                <img src="/static/images/Microsoft.jpg">
+                <h3>Microsoft</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- alumnies -->
+    <section id="alumnies" class="alumnies">
+        <div class="alumnies-inner">
+            <h1>Alumnies</h1>
+            <div class="alumnies-row">
+                <div class="alumni-column">
+                    <div class="alumni">
+                        <img src="/static/images/Sonu.jpg" alt="Error Image">
+                        <div class="alumni-name">Sonu Banjara</div>
+                        <p>
+                            "Nice it helped me a lot Through my placement Journey. During my first year of college it help me a lot to decide what should i need to study for placement. "
+                        </p>
+                    </div>
+                </div>
+                <div class="alumni-column">
+                    <div class="alumni">
+                        <img src="/static/images/Sidd.jpg" alt="Error Image">
+                        <div class="alumni-name">Siddharth Jha</div>
+                        <p>
+                            "Nice it helped me a lot Through my placement Journey"
+                        </p>
+                    </div>
+                </div>
+                <div class="alumni-column">
+                    <div class="alumni">
+                        <img src="/static/images/Sourav.jpg" alt="Error Image">
+                        <div class="alumni-name">Sourav Choudhary</div>
+                        <p>
+                            "Would highly recommend as it helped me in fetching my dream job at Google"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alumni-column">
+                    <div class="alumni">
+                        <img src="/static/images/Rahul.jpg" alt="Error Image">
+                        <div class="alumni-name">Rahul Singh</div>
+                        <p>
+                            "Nice work done by the MUPC team as they helped me a lot through my placement Journey:)"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruiters -->
+    <div id="recruiters" class="recruiters-Header">
+        <h1>Recruiters</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aut porro corrupti placeat, quasi voluptate!
+        </p>
+    </div>
+    <section class="recruiters">
+        <div class="slider">
+            <div class="slide-track">
+                <!-- Companies Images  -->
+                <div class="slide">
+                    <img src="/static/images/Companies/Image1.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image2.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image3.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image4.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image5.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image6.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image7.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image8.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image9.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image10.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image11.jpg">
+                </div>
+                <!-- Same Companies Images  -->
+                <div class="slide">
+                    <img src="/static/images/Companies/Image1.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image2.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image3.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image4.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image5.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image6.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image7.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image8.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image9.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image10.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Companies/Image11.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="help">
+        <h1>For Any Query!</h1>
+        <p>Medi-Caps University
+
+            A.B. Road, Pigdamber, Rau Indore - 453331
+            <br>
+            0731-4259500, 2856294
+
+            0731-4259501
+            <br>
+            e-mail: info@medicaps.ac.in
+        </p>
+        <a href="contactUs" class="hero-button">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h1>About Us</h1>
+        <p>
+            Medi-Caps University is one of the brand names in the arena of technical education and is contributing in
+            making Indore an educational hub.
+            Since its inception in July 2000, the group consistently aims at creating an ideal ambiance for budding
+            technocrats and helping them to grow like true professionals.
+            The main strength of Medi-Caps university is, its highly qualified faculty members. We have an optimal blend
+            of academic brilliance and industry exposure, which is supplemented by highly specialized visiting faculty
+            and industry experts, senior professionals from various segments of different industry/ business houses.
+            This has helped in refining the candidature of our graduating students from Engineering and Management field
+            since the last 20 years.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/Mediuniv/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/medicaps_university/" target="_blank"><i class="fa fa-instagram" ></i></a>
+            <a href="https://twitter.com/caps_medi" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/school/medi-caps-university-indore/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCSeSaSzuPcLY8f0Zov01ZuQ/about" target="_blank"><i class="fa fa-youtube"></i></a>
+        </div>
+        <p>Made By <i class="fa fa-at"></i> Sonu Banjara</p>
+        <p>© 2023 MUPC</p>
+    </section>
+    <script src="/static/js/HomeJS.js"></script>
+</body>
+
+</html>

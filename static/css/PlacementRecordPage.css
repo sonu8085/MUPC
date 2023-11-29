@@ -1,0 +1,40 @@
+header {
+    background-color: #1E90FF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+#year-selector {
+    margin-bottom: 20px;
+}
+
+#year-selector label {
+    margin-right: 10px;
+}
+
+#placement-record {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.placement-card {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.placement-card h2 {
+    margin-top: 0;
+}
+
+.placement-card p {
+    margin: 10px 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now</title>
+    <link rel="stylesheet" href="/static/css/JoiningForm.css">
+    <script src="https://kit.fontawesome.com/fd67e77f6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-box">
+            <h2>Join Now</h2>
+            <form action="joiningform" method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="name" name="name" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-mobile"></i></span>
+                    <input type="tel" id="number" name="number" required>
+                    <label>Mobile Number</label>
+                </div>
+                <div class="conditions">
+                    <label><input type="checkbox" required>Accept terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Join</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fd67e77f6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-box register {{ message.tags }}">
+            <h2>Registration</h2>
+            {% for message in messages %}
+            <div id="message" class="message"><strong>Message : </strong>{{ message }}
+                <i class="fa fa-times close-btn" onclick="messageClose()"></i>
+            </div>
+            {% endfor %}
+            <form action="signup" method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="username" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="name" name="name" required>
+                    <label>Full name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-key"></i></span>
+                    <input type="password" id="password1" name="password1" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-key"></i></span>
+                    <input type="password" id="password2" name="password2" required>
+                    <label>Confirm Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required>I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="signin" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let message = document.getElementById('message')
+
+        function messageClose() {
+            message.style.right = "-400px";
+        }
+    </script>
+</body>
+
+</html>

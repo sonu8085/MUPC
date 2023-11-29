@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/EventPage.css">
+	<title>Event Page</title>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-sm fixed-top">
+		<!-- <a href="/event" class="navbar-brand">event-page</a> -->
+		<a href="/home" class="navbar-brand"><img src="/static/images/Logo.png"></a>
+		<div>
+			<ul class="navbar-nav">
+				<li class="nav-item"> <a href="/home" class="nav-link">Home</a></li>
+				<li class="nav-item"> <a href="/home#alumnies" class="nav-link">Alumni</a></li>
+				<li class="nav-item"> <a href="/contactUs" class="nav-link">Conatct Us</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- header -->
+	<div class="header">
+		<div class="img-parent">
+			<div class="img">
+				<img src="/static/images/event-page-background.jpg" alt="">
+			</div>
+			<div class="img-overlay"></div>
+		</div>
+		<div class="img-content">
+			<h2>Schedule Event</h2>
+			<span>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam maxime nemo in at molestias sint
+				tenetur distinctio? Deleniti veniam est id ad at perspiciatis, eum, aliquid voluptas excepturi pariatur
+				dolorem!
+			</span>
+		</div>
+	</div>
+
+	<!-- Event -->
+	<div class="container event">
+		<div class="row justify-content-center text-center">
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center text-center">
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center text-center">
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+			<div class="offset-sm-1 col-sm-5">
+				<img src="/static/images/event-1.jpg" class="img-fluid" alt="">
+				<div class="event-content">
+					<h4>Business Mastery Event</h4>
+					<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, ducimus molestias iste rerum
+						modi nobis voluptate sint cupiditate et iure.</span><br>
+					<a href="joiningform">join</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		// $(document).scroll(funtion(){
+		// 	$(".navbar").toggleClass("scroll", $(this).scrollTop() > $(".navbar").height());
+		// })
+
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $(".navbar");
+				$nav.toggleClass('scroll', $(this).scrollTop() > $nav.height());
+			});
+		});
+	</script>
+</body>
+
+</html>
